@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" role="img" aria-labelledby="title-icon">
+  <title id="title-icon">WorkCentrik Mark</title>
+  <defs>
+    <style>
+      .navy { fill: #0F2A44; }
+      .teal { fill: #1FB6A6; }
+    </style>
+  </defs>
+
+  <g transform="translate(0, 55)">
+    <polygon points="10,0 55,90 80,90 40,0" class="navy" />
+    <polygon points="55,90 85,90 115,22 85,22" class="navy" />
+    <polygon points="85,22 115,22 145,90 115,90" class="teal" />
+    <polygon points="115,90 160,0 190,0 145,90" class="teal" />
+    <circle cx="70" cy="90" r="4" class="navy" />
+    <circle cx="100" cy="22" r="4" class="navy" />
+    <circle cx="130" cy="90" r="4" class="teal" />
+  </g>
+</svg>

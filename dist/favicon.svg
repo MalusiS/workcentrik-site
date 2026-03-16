@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1037)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(5,0,0,5,0,0)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><style>
+    #light-icon { display: inline; }
+    #dark-icon { display: none; }
+    @media (prefers-color-scheme: dark) {
+      #light-icon { display: none; }
+      #dark-icon { display: inline; }
+    }
+    .navy { fill: #0F2A44; }
+    .teal { fill: #1FB6A6; }
+  </style><g id="light-icon" transform="translate(0, 53)">
+    <polygon points="10,0 55,90 80,90 40,0" class="navy"></polygon>
+    <polygon points="55,90 85,90 115,22 85,22" class="navy"></polygon>
+    <polygon points="85,22 115,22 145,90 115,90" class="teal"></polygon>
+    <polygon points="115,90 160,0 190,0 145,90" class="teal"></polygon>
+    <circle cx="70" cy="90" r="4" class="navy"></circle>
+    <circle cx="100" cy="22" r="4" class="navy"></circle>
+    <circle cx="130" cy="90" r="4" class="teal"></circle>
+  </g><g id="dark-icon">
+    <rect x="0" y="0" width="200" height="200" rx="45" fill="#ffffff"></rect>
+    <g transform="translate(0, 53)">
+      <polygon points="10,0 55,90 80,90 40,0" class="navy"></polygon>
+      <polygon points="55,90 85,90 115,22 85,22" class="navy"></polygon>
+      <polygon points="85,22 115,22 145,90 115,90" class="teal"></polygon>
+      <polygon points="115,90 160,0 190,0 145,90" class="teal"></polygon>
+      <circle cx="70" cy="90" r="4" class="navy"></circle>
+      <circle cx="100" cy="22" r="4" class="navy"></circle>
+      <circle cx="130" cy="90" r="4" class="teal"></circle>
+    </g>
+  </g></svg></g></g><defs><clipPath id="SvgjsClipPath1037"><rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect></clipPath></defs></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1038)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(5,0,0,5,0,0)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><style>
+    #light-icon { display: inline; }
+    #dark-icon { display: none; }
+    @media (prefers-color-scheme: dark) {
+      #light-icon { display: none; }
+      #dark-icon { display: inline; }
+    }
+    .navy { fill: #0F2A44; }
+    .teal { fill: #1FB6A6; }
+  </style><g id="light-icon" transform="translate(0, 53)">
+    <polygon points="10,0 55,90 80,90 40,0" class="navy"></polygon>
+    <polygon points="55,90 85,90 115,22 85,22" class="navy"></polygon>
+    <polygon points="85,22 115,22 145,90 115,90" class="teal"></polygon>
+    <polygon points="115,90 160,0 190,0 145,90" class="teal"></polygon>
+    <circle cx="70" cy="90" r="4" class="navy"></circle>
+    <circle cx="100" cy="22" r="4" class="navy"></circle>
+    <circle cx="130" cy="90" r="4" class="teal"></circle>
+  </g><g id="dark-icon">
+    <rect x="0" y="0" width="200" height="200" rx="45" fill="#ffffff"></rect>
+    <g transform="translate(0, 53)">
+      <polygon points="10,0 55,90 80,90 40,0" class="navy"></polygon>
+      <polygon points="55,90 85,90 115,22 85,22" class="navy"></polygon>
+      <polygon points="85,22 115,22 145,90 115,90" class="teal"></polygon>
+      <polygon points="115,90 160,0 190,0 145,90" class="teal"></polygon>
+      <circle cx="70" cy="90" r="4" class="navy"></circle>
+      <circle cx="100" cy="22" r="4" class="navy"></circle>
+      <circle cx="130" cy="90" r="4" class="teal"></circle>
+    </g>
+  </g></svg></g></g><defs><clipPath id="SvgjsClipPath1038"><rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect></clipPath></defs></svg></g></svg>

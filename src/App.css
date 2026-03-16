@@ -1,0 +1,322 @@
+/* src/App.css */
+
+/* 1. Premium Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Color Palette based on WorkCentrik Logo */
+:root {
+  --navy-dark: #192a40;
+  --navy-darker: #0d1724;
+  --teal-accent: #21b8a6;
+  --teal-hover: #1a9687;
+  --bg-light: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --text-light: #ffffff;
+  --whatsapp-green: #075E54;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utilities */
+.flex-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Automatically spaces the icon and text */
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 5%;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-link {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.logo {
+  height: 75px;
+  width: auto;
+}
+
+/* Buttons */
+.cta-button {
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px; /* Softer, modern corners */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button.outline {
+  border: 2px solid var(--navy-dark);
+  color: var(--navy-dark);
+}
+
+.cta-button.outline:hover {
+  background-color: var(--navy-dark);
+  color: var(--text-light);
+  box-shadow: 0 4px 12px rgba(25, 42, 64, 0.2);
+}
+
+.cta-button.primary {
+  background-color: var(--teal-accent);
+  color: var(--navy-darker); /* Dark text on teal passes contrast brilliantly */
+  font-weight: 700; /* Bolder weight ensures readability */
+  display: inline-flex;
+  margin-top: 1.5rem;
+}
+
+.cta-button.primary:hover {
+  background-color: var(--teal-hover);
+  color: var(--navy-darker);
+  box-shadow: 0 6px 15px rgba(33, 184, 166, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  /* Rich gradient for premium depth */
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-darker) 100%);
+  color: var(--text-light);
+  text-align: center;
+  
+  /* Upgraded to perfectly center content and fill the screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 115px); /* 100% of screen height minus the desktop header */
+  padding: 4rem 5%;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  color: var(--text-light);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin: 0 auto 2.5rem auto;
+  color: #cbd5e1; /* Softer white for readability */
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* Services Section */
+.services-section {
+  padding: 6rem 5%;
+  text-align: center;
+  scroll-margin-top: 120px; /* For smooth scrolling offset */
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-bottom: 4rem;
+  letter-spacing: -0.01em;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top-Tier Interactive Cards */
+.service-card {
+  background: var(--card-bg);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  border: 1px solid #f1f5f9;
+  border-top: 4px solid var(--teal-accent);
+  text-align: left;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  border-color: #e2e8f0;
+}
+
+/* Icon Wrapper Styling */
+.service-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: rgba(33, 184, 166, 0.1); /* Transparent Teal */
+  color: var(--teal-accent);
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover .service-icon-wrapper {
+  background-color: var(--teal-accent);
+  color: var(--text-light);
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.service-card h3 {
+  color: var(--navy-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #e2e8f0; /* Soft slate gray */
+  padding: 5rem 5%;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: var(--navy-dark);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  color: #475569; /* Darkened for perfect WCAG contrast */
+  font-size: 1.1rem;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  font-size: 1.1rem;
+  color: var(--navy-dark);
+  background-color: var(--card-bg);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.contact-link.whatsapp {
+  background-color: var(--whatsapp-green);
+  color: var(--text-light);
+}
+
+.contact-link.whatsapp:hover {
+  background-color: #054c44; /* Darker green for hover state */
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--navy-darker);
+  color: #94a3b8;
+  text-align: center;
+  padding: 3rem 5%;
+  font-size: 0.95rem;
+}
+
+.site-footer p {
+  margin-bottom: 0.5rem;
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background-color: var(--whatsapp-green);
+  color: var(--text-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy hover */
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .logo { height: 60px; }
+  
+  .hero { 
+    min-height: calc(100vh - 100px); /* Fallback */
+    min-height: calc(100svh - 100px); /* Perfect fit for modern mobile browsers */
+    padding: 2rem 5%; 
+  }
+  .hero-content h1 { font-size: 2.25rem; }
+  .hero-content p { font-size: 1.05rem; }
+  
+  .services-section { padding: 4rem 5%; }
+  .services-section h2 { font-size: 2rem; margin-bottom: 2.5rem; }
+  
+  .contact-methods { flex-direction: column; gap: 1rem; width: 100%; max-width: 350px; margin-left: auto; margin-right: auto;}
+  .contact-link { width: 100%; }
+
+  .floating-whatsapp {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 55px;
+    height: 55px;
+  }
+}
