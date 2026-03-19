@@ -32,12 +32,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Brand Text Selection */
+::selection {
+  background-color: var(--teal-accent);
+  color: var(--navy-darker);
+}
+::-moz-selection {
+  background-color: var(--teal-accent);
+  color: var(--navy-darker);
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--navy-dark);
+  border-radius: 8px;
+  border: 2px solid var(--bg-light); /* Creates a padded look */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--teal-accent);
+}
+
 /* Utilities */
 .flex-center {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem; /* Automatically spaces the icon and text */
+  gap: 0.5rem; 
 }
 
 /* Header */
@@ -63,10 +89,47 @@ body {
   width: auto;
 }
 
+/* Centered Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--navy-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  padding-bottom: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+/* Premium Animated Underline Hover Effect */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--teal-accent);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover {
+  color: var(--teal-hover);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
 /* Buttons */
 .cta-button {
   padding: 0.85rem 1.75rem;
-  border-radius: 8px; /* Softer, modern corners */
+  border-radius: 8px; 
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
@@ -86,8 +149,8 @@ body {
 
 .cta-button.primary {
   background-color: var(--teal-accent);
-  color: var(--navy-darker); /* Dark text on teal passes contrast brilliantly */
-  font-weight: 700; /* Bolder weight ensures readability */
+  color: var(--navy-darker); 
+  font-weight: 700; 
   display: inline-flex;
   margin-top: 1.5rem;
 }
@@ -101,17 +164,14 @@ body {
 
 /* Hero Section */
 .hero {
-  /* Rich gradient for premium depth */
   background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-darker) 100%);
   color: var(--text-light);
   text-align: center;
-  
-  /* Upgraded to perfectly center content and fill the screen */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 115px); /* 100% of screen height minus the desktop header */
+  min-height: calc(100vh - 115px); 
   padding: 4rem 5%;
 }
 
@@ -127,7 +187,7 @@ body {
   font-size: 1.25rem;
   max-width: 650px;
   margin: 0 auto 2.5rem auto;
-  color: #cbd5e1; /* Softer white for readability */
+  color: #cbd5e1; 
   font-weight: 300;
   line-height: 1.8;
 }
@@ -136,27 +196,28 @@ body {
 .services-section {
   padding: 6rem 5%;
   text-align: center;
-  scroll-margin-top: 120px; /* For smooth scrolling offset */
+  scroll-margin-top: 25px; /* Ensures smooth scroll accounts for sticky header */
 }
 
 .services-section h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--navy-dark);
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
   letter-spacing: -0.01em;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly widened for pricing */
   gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Top-Tier Interactive Cards */
+/* Top-Tier Interactive Cards (Upgraded for Pricing & Features) */
 .service-card {
+  position: relative; /* Anchors the popular badge */
   background: var(--card-bg);
   padding: 2.5rem 2rem;
   border-radius: 16px;
@@ -164,13 +225,37 @@ body {
   border: 1px solid #f1f5f9;
   border-top: 4px solid var(--teal-accent);
   text-align: left;
+  text-decoration: none;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-  border-color: #e2e8f0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-color: #cbd5e1;
+}
+
+/* Most Popular Highlight */
+.service-card.popular-card {
+  border: 2px solid var(--teal-accent);
+  box-shadow: 0 15px 35px rgba(33, 184, 166, 0.08);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--navy-dark);
+  color: var(--text-light);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Icon Wrapper Styling */
@@ -180,7 +265,7 @@ body {
   justify-content: center;
   width: 64px;
   height: 64px;
-  background-color: rgba(33, 184, 166, 0.1); /* Transparent Teal */
+  background-color: rgba(33, 184, 166, 0.1); 
   color: var(--teal-accent);
   border-radius: 14px;
   margin-bottom: 1.5rem;
@@ -200,17 +285,123 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.service-card p {
+.service-desc {
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.6;
+  margin-bottom: 1.5rem; 
+}
+
+/* New Feature List */
+.service-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  flex-grow: 1; /* Pushes the pricing footer to the bottom */
+}
+
+.service-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.feature-check {
+  color: var(--teal-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Service Footer & Pricing */
+.service-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f1f5f9;
+  margin-top: auto; 
+  transition: border-color 0.4s ease;
+}
+
+.service-card:hover .service-footer {
+  border-color: #e2e8f0;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-price {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--navy-dark);
+}
+
+.service-range {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* Interactive Action Link (WCAG Compliant) */
+.service-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--navy-dark); /* High contrast for accessibility */
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.service-action svg {
+  color: var(--teal-accent); /* Keep the arrow teal for brand pop */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover .service-action {
+  color: var(--navy-darker);
+}
+
+.service-card:hover .service-action svg {
+  transform: translateX(5px); 
+}
+
+/* Header Context & Disclaimer Elements */
+.services-header-context {
+  margin-bottom: 4rem;
+}
+
+.services-disclaimer {
+  margin-top: 3rem; /* Increased from 3rem for more breathing room */
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.premium-pill {
+  display: inline-block;
+  background-color: rgba(33, 184, 166, 0.15);
+  color: var(--navy-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
 }
 
 /* Contact Section */
 .contact-section {
-  background-color: #e2e8f0; /* Soft slate gray */
+  background-color: #e2e8f0; 
   padding: 5rem 5%;
   text-align: center;
+  scroll-margin-top: 25px; /* Added here so the Contact link scrolls perfectly too */
 }
 
 .contact-section h2 {
@@ -221,7 +412,7 @@ body {
 }
 
 .contact-section p {
-  color: #475569; /* Darkened for perfect WCAG contrast */
+  color: #475569; 
   font-size: 1.1rem;
 }
 
@@ -256,7 +447,7 @@ body {
 }
 
 .contact-link.whatsapp:hover {
-  background-color: #054c44; /* Darker green for hover state */
+  background-color: #054c44; 
 }
 
 /* Footer */
@@ -287,7 +478,7 @@ body {
   justify-content: center;
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
   z-index: 1000;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy hover */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
 .floating-whatsapp:hover {
@@ -297,11 +488,14 @@ body {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  /* Hide desktop center nav on mobile */
+  .desktop-nav { display: none; }
+
   .logo { height: 60px; }
   
   .hero { 
-    min-height: calc(100vh - 100px); /* Fallback */
-    min-height: calc(100svh - 100px); /* Perfect fit for modern mobile browsers */
+    min-height: calc(100vh - 100px); 
+    min-height: calc(100svh - 100px); 
     padding: 2rem 5%; 
   }
   .hero-content h1 { font-size: 2.25rem; }
@@ -309,6 +503,10 @@ body {
   
   .services-section { padding: 4rem 5%; }
   .services-section h2 { font-size: 2rem; margin-bottom: 2.5rem; }
+
+  /* Fix scroll overlap for mobile sticky header */
+  .services-section { scroll-margin-top: 50px; }
+  .contact-section { scroll-margin-top: 50px; }
   
   .contact-methods { flex-direction: column; gap: 1rem; width: 100%; max-width: 350px; margin-left: auto; margin-right: auto;}
   .contact-link { width: 100%; }
