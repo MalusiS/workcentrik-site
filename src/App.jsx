@@ -6,8 +6,7 @@ import logo from '/workcentrik-logo.svg';
 import { 
   Globe, 
   ShoppingCart, 
-  Tag, 
-  Cloud, 
+  Cloud,
   Award, 
   Image as ImageIcon, 
   Users, 
@@ -21,7 +20,8 @@ import {
   Target,
   Zap,
   Menu,
-  X
+  X,
+  Smartphone
 } from 'lucide-react';
 
 function App() {
@@ -108,31 +108,32 @@ function App() {
       popular: false
     },
     {
-      icon: <Tag size={32} strokeWidth={1.5} />,
-      title: "Domain Name Registration",
-      desc: "Secure .co.za, .com, .net and international domains with instant activation.",
-      price: "From R 99",
-      range: "Typical range: R 99 – R 399 / year",
+      icon: <Smartphone size={32} strokeWidth={1.5} />,
+      title: "Mobile App Development",
+      desc: "High-performance native apps for iOS and Android, built to scale and dominate the app stores.",
+      price: "From R 25,000",
+      range: "Typical range: R 25,000 – R 85,000+",
       features: [
-        "WHOIS privacy included",
-        "DNS management panel",
-        "Auto-renewal option",
-        "Transfer assistance"
+        "Cross-platform (iOS & Android)",
+        "App Store & Play Store deployment",
+        "Custom API integration",
+        "Offline functionality",
+        "Push notifications"
       ],
       popular: false
     },
     {
       icon: <Cloud size={32} strokeWidth={1.5} />,
-      title: "Web Hosting & Maintenance",
-      desc: "Ultra-fast SSD hosting with daily backups, security monitoring and 99.99% uptime.",
-      price: "From R 149",
-      range: "Typical range: R 149 – R 799 / month",
+      title: "Premium Hosting & Domains",
+      desc: "Ultra-fast SSD hosting and secure domain registration (.co.za, .com) managed entirely for you.",
+      price: "From R 249 /mo",
+      range: "Typical range: R 249 – R 899/mo",
       features: [
-        "Unlimited bandwidth",
+        "Domain registration & DNS setup",
+        "Unlimited bandwidth & SSD storage",
         "Daily offsite backups",
-        "Free SSL certificate",
-        "Weekly security scans",
-        "24/7 monitoring"
+        "Free SSL & weekly security scans",
+        "WHOIS privacy protection"
       ],
       popular: true
     },
@@ -289,14 +290,15 @@ function App() {
             
             {/* Magnetic Headline */}
             <h1>
-              Engineer Your Digital <br className="desktop-break" />
-              <span className="text-gradient">Unfair Advantage.</span>
+              Engineer Your Unfair <br className="desktop-break" />
+              <span className="text-gradient">Digital Advantage.</span>
             </h1>
             
             {/* Authoritative Subheadline */}
             <p className="hero-subtitle">
-              Based in Cape Town, WorkCentrik transforms complex visions into lightning-fast, 
-              scalable, and highly-converting web assets. Stop blending in. Start dominating online.
+              WorkCentrik engineers high-performance digital experiences that transform
+              complex ideas into scalable, conversion-driven platforms. Stop blending in.
+              Start dominating online.
             </p>
             
             {/* Dual CTAs */}
