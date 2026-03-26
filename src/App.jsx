@@ -321,7 +321,7 @@ function App() {
                 <span className="dot-separator">•</span>
                 <span>UI/UX</span>
                 <span className="dot-separator">•</span>
-                <span>Technical SEO</span>
+                <span>SEO</span>
               </div>
             </div>
 

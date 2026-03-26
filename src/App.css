@@ -1080,7 +1080,7 @@ body {
   }
   
   /* 3. Hero Text Adjustments */
-  .hero-content h1 { font-size: 2.75rem; }
+  .hero-content h1 { font-size: 2rem; }
   .text-gradient { 
     display: block; /* Forces "Unfair Advantage" to its own line on mobile */
     margin-top: 0.2rem;
@@ -1103,6 +1103,13 @@ body {
     gap: 1.25rem;
   }
 
+  .about-section .services-header-context h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+}
+
   /* 4. Fix Leadership Card Squishing */
   .leadership-header {
     flex-direction: column;
@@ -1122,6 +1129,7 @@ body {
   .contact-form-wrapper {
     padding: 2rem 1.5rem;
   }
+  .contact-info h2 { font-size: 1.7rem; }
   .contact-methods { 
     align-items: center;
     flex-direction: column; 
