@@ -1051,7 +1051,7 @@ body {
   box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
 }
 
-/* Mobile Responsiveness */
+/* Tablet Responsiveness */
 @media (max-width: 968px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -1059,33 +1059,62 @@ body {
   }
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   /* Hide desktop center nav AND the header WA button on mobile */
   .desktop-nav, .header-wa-btn { display: none; }
 
   /* Show the hamburger menu */
   .mobile-menu-toggle { display: flex; align-items: center; }
+  
+  /* 1. Sleeker Mobile Menu Links */
+  .mobile-nav-links { gap: 1.5rem; }
+  .mobile-nav-links a { font-size: 1.35rem; }
 
-  .logo { height: 40px; }
+  .logo { height: 45px; }
   
   .hero { 
     min-height: calc(100vh - 65px); 
     min-height: calc(100svh - 65px); 
     padding: 2rem 5%; 
   }
-  .hero-content h1 { font-size: 2.75rem; } 
-  .hero-subtitle { font-size: 1.05rem; }
-  .hero-ctas {
-    flex-direction: column;
-    width: 100%;
-    max-width: 350px;
+  
+  /* 3. Hero Text Adjustments */
+  .hero-content h1 { font-size: 2.75rem; }
+  .text-gradient { 
+    display: block; /* Forces "Unfair Advantage" to its own line on mobile */
+    margin-top: 0.2rem;
   }
+  .hero-subtitle { font-size: 1.05rem; }
+  .hero-ctas { flex-direction: column; width: 100%; max-width: 350px; }
   .desktop-break { display: none; }
   .tech-tags { font-size: 0.85rem; }
   
+  /* General Spacing Polish for Cards */
   .services-section { padding: 4rem 5%; }
   .services-section h2 { font-size: 2rem; margin-bottom: 2.5rem; }
+  .service-card { padding: 2rem 1.5rem; } /* Slightly tighter mobile padding */
+  .leadership-card { padding: 2.5rem 1.5rem; }
+  
+  /* 2. Fix Service Card Icons (Stack vertically below price) */
+  .service-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
 
+  /* 4. Fix Leadership Card Squishing */
+  .leadership-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+  }
+  .leadership-avatar {
+    flex-shrink: 0; /* Prevents the circle from turning into an oval */
+  }
+
+  /* Contact Section Refinements */
   .contact-container { 
     grid-template-columns: 1fr; 
     gap: 3rem; 
@@ -1101,7 +1130,6 @@ body {
     max-width: 350px; 
     margin: 0 auto; 
   }
-  
   .contact-link { width: 100%; }
 
   .floating-whatsapp {
