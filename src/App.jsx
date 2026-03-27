@@ -290,8 +290,8 @@ function App() {
             
             {/* Magnetic Headline */}
             <h1>
-              Engineer Your Unfair <br className="desktop-break" />
-              <span className="text-gradient">Digital Advantage.</span>
+              Engineer Your Digital <br className="desktop-break" />
+              <span className="text-gradient">Unfair Advantage.</span>
             </h1>
             
             {/* Authoritative Subheadline */}
