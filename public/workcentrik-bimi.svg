@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#ffffff"/>
+
+  <!-- Navy shapes -->
+  <polygon points="10,55 55,145 80,145 40,55" fill="#0F2A44"/>
+  <polygon points="55,145 85,145 115,77 85,77" fill="#0F2A44"/>
+
+  <!-- Teal shapes -->
+  <polygon points="85,77 115,77 145,145 115,145" fill="#1FB6A6"/>
+  <polygon points="115,145 160,55 190,55 145,145" fill="#1FB6A6"/>
+
+  <!-- Dots -->
+  <circle cx="70" cy="145" r="4" fill="#0F2A44"/>
+  <circle cx="100" cy="77" r="4" fill="#0F2A44"/>
+  <circle cx="130" cy="145" r="4" fill="#1FB6A6"/>
+</svg>
