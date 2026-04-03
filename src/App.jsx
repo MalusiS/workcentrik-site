@@ -71,7 +71,7 @@ function App() {
 
     return () => observer.disconnect(); 
   }, []);
-  const whatsappNumber = "27768297455";
+  const whatsappNumber = "27656501541";
   const defaultWhatsappMessage = encodeURIComponent("Hi WorkCentrik! I'm interested in your design and development services.");
   const defaultWhatsappLink = `https://wa.me/${whatsappNumber}?text=${defaultWhatsappMessage}`;
 
