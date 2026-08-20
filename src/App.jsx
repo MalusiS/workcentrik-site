@@ -21,7 +21,8 @@ import {
   Zap,
   Menu,
   X,
-  Smartphone
+  Smartphone,
+  Rocket
 } from 'lucide-react';
 
 function App() {
@@ -77,6 +78,22 @@ function App() {
 
   // ENHANCED SERVICES WITH PRICE RANGES AND FEATURES
   const services = [
+    {
+    icon: <Rocket size={32} strokeWidth={1.5} />,
+    title: "Foundation Build",
+    desc: "A pre-engineered launch platform for startups — fast, credible, built on our proprietary React engine.",
+    price: "R 4,950",
+    range: "Fixed price • 7–10 business day delivery",
+    features: [
+      "Single-page scroller or up to 4 pages",
+      "Proprietary React/Tailwind engine (100 Lighthouse)",
+      "Choice of 2–3 pre-engineered layouts",
+      "Your brand colours, type & logo applied",
+      "1 round of content/colour revisions"
+    ],
+    popular: false,
+    badge: "Startup Engineered"
+    },
     {
       icon: <Globe size={32} strokeWidth={1.5} />,
       title: "Custom Web Design & Development",
@@ -342,12 +359,16 @@ function App() {
               const serviceLink = `https://wa.me/${whatsappNumber}?text=${serviceMessage}`;
 
               return (
-                // Changed from <a> to <div> to allow multiple buttons inside
-                <div key={index} className={`service-card interactive ${service.popular ? 'popular-card' : ''}`}>
-                  
+                <div key={index} className={`service-card interactive ${service.popular ? 'popular-card' : ''} ${service.badge ? 'foundation-card' : ''}`}>
+  
                   {/* Popular Badge */}
                   {service.popular && (
                     <div className="popular-badge">Most Popular</div>
+                  )}
+
+                  {/* New: Custom text badge (used for Foundation Build) */}
+                  {service.badge && (
+                    <div className="custom-badge">{service.badge}</div>
                   )}
 
                   <div className="service-icon-wrapper">

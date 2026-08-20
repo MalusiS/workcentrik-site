@@ -464,16 +464,21 @@ body {
 
 .popular-badge {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background-color: var(--navy-dark);
-  color: var(--text-light);
-  font-size: 0.7rem;
+  top: -12px;
+  left: 24px;
+  background: #0B2A45;
+  color: #22D3C5;
+  border: 1px solid rgba(34, 211, 197, 0.35);
+  font-size: 12px;
   font-weight: 700;
-  padding: 0.35rem 0.85rem;
+  letter-spacing: 1px;
+  padding: 6px 14px;
   border-radius: 20px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+}
+
+.foundation-card {
+  border: 1px solid rgba(34, 211, 197, 0.25);
 }
 
 /* Icon Wrapper Styling */
