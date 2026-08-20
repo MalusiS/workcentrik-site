@@ -92,7 +92,6 @@ function App() {
       "1 round of content/colour revisions"
     ],
     popular: false,
-    badge: "Startup Engineered"
     },
     {
       icon: <Globe size={32} strokeWidth={1.5} />,
