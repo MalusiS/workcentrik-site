@@ -50,7 +50,7 @@ This project was built from the ground up to set a new standard in digital agenc
 
 ## 👤 Author
 
-**Malusi Skunyana** | Front-End Developer, WorkCentrik
+**Malusi Skunyana** | Lead Engineer, WorkCentrik
 
 📧 info@workcentrik.com
 
