@@ -28,13 +28,13 @@ import {
 function App() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   // State to track active section
   const [activeSection, setActiveSection] = useState('');
 
   // State to track which service is selected for the contact form
   const [selectedService, setSelectedService] = useState('');
-  
+
   // Ref to hold the current visibility status of all sections without triggering re-renders
   const visibleSections = useRef({});
 
@@ -79,30 +79,37 @@ function App() {
   // ENHANCED SERVICES WITH PRICE RANGES AND FEATURES
   const services = [
     {
-    icon: <Rocket size={32} strokeWidth={1.5} />,
-    title: "Foundation Build",
-    desc: "A pre-engineered launch platform for startups — fast, credible, built on our proprietary React engine.",
-    price: "R 4,950",
-    range: "Fixed price • 7–10 business day delivery",
-    features: [
-      "Single-page scroller or up to 4 pages",
-      "Proprietary React/Tailwind engine (100 Lighthouse)",
-      "Choice of 2–3 pre-engineered layouts",
-      "Your brand colours, type & logo applied",
-      "1 round of content/colour revisions"
-    ],
-    popular: false,
+      icon: <Rocket size={32} strokeWidth={1.5} />,
+      title: "Foundation Build",
+      badge: "Launch Ready",
+      desc: "Engineered for launch velocity. We deploy your brand onto our proprietary React performance chassis — the same architecture standards as our bespoke builds. Single-page or up to 4 pages. No templates. Built to expand.",
+      price: "R 6,600",
+      range: "Fixed scope • 7–10 business days",
+      features: [
+        "Proprietary React + Tailwind performance chassis",
+        "Single-page or up to 4 simple pages",
+        "Choice of 3 conversion-focused architectures",
+        "Full brand injection (colours, typography, logo, imagery)",
+        "Contact form + foundational on-page SEO",
+        "1 revision round + 30 days launch support",
+        "Not included: bespoke design, custom features, advanced integrations"
+      ],
+      popular: false,
     },
     {
       icon: <Globe size={32} strokeWidth={1.5} />,
       title: "Custom Web Design & Development",
-      desc: "Pixel-perfect, lightning-fast, fully responsive websites built with modern React.",
-      price: "From R 9,500",
-      range: "Typical range: R 9,500 – R 35,000",
+      desc: "Bespoke digital platforms engineered from strategy to launch. We wireframe your user journey, design every interaction, and build a platform that converts — with zero templates and full ownership of the codebase.",
+      price: "From R 12,500",
+      range: "Typical range: R 12,500 – R 35,000",
       features: [
-        "Mobile-first responsive design",
-        "SEO-optimised structure",
-        "Contact forms + analytics",
+        "Fully bespoke design — no templates",
+        "Strategic discovery & UX wireframing",
+        "Multi-page architecture sized to project requirements",
+        "Advanced animations & micro-interactions",
+        "Technical SEO, schema markup & speed tuning",
+        "CRM / marketing tool integration",
+        "Custom component library",
         "3 rounds of revisions",
         "1 month free support"
       ],
@@ -126,7 +133,7 @@ function App() {
     {
       icon: <Smartphone size={32} strokeWidth={1.5} />,
       title: "Mobile App Development",
-      desc: "High-performance native apps for iOS and Android, built to scale and dominate the app stores.",
+      desc: "High-performance cross-platform apps for iOS and Android, built to scale.",
       price: "From R 25,000",
       range: "Typical range: R 25,000 – R 85,000+",
       features: [
@@ -151,7 +158,7 @@ function App() {
         "Free SSL & weekly security scans",
         "WHOIS privacy protection"
       ],
-      popular: true
+      popular: false
     },
     {
       icon: <Award size={32} strokeWidth={1.5} />,
@@ -207,7 +214,7 @@ function App() {
         "On-page optimisation",
         "Monthly ranking reports"
       ],
-      popular: true
+      popular: false
     },
     {
       icon: <Wrench size={32} strokeWidth={1.5} />,
@@ -237,7 +244,7 @@ function App() {
   const scrollToSection = (e, targetId) => {
     e.preventDefault();
     setIsMobileMenuOpen(false); // Close mobile menu on click
-    
+
     if (targetId === 'top') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
@@ -298,25 +305,25 @@ function App() {
           <div className="hero-glow glow-2"></div>
 
           <div className="hero-content">
-            
+
             {/* Status Pill */}
             <div className="hero-pill">
               <span className="pulse-dot"></span> Accepting new projects
             </div>
-            
+
             {/* Magnetic Headline */}
             <h1>
               Engineer Your Digital <br className="desktop-break" />
               <span className="text-gradient">Unfair Advantage.</span>
             </h1>
-            
+
             {/* Authoritative Subheadline */}
             <p className="hero-subtitle">
               WorkCentrik engineers high-performance digital experiences that transform
               complex ideas into scalable, conversion-driven platforms. Stop blending in.
               Start dominating online.
             </p>
-            
+
             {/* Dual CTAs */}
             <div className="hero-ctas">
               <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="cta-button primary flex-center">
@@ -351,7 +358,7 @@ function App() {
             <h2>Services</h2>
             <p className="services-subtitle">Everything your business needs to dominate online — with clear price ranges so you know exactly what to expect.</p>
           </div>
-          
+
           <div className="services-grid">
             {services.map((service, index) => {
               const serviceMessage = encodeURIComponent(`Hi WorkCentrik! 👋\n\nI'm interested in your *${service.title}* service.\n\nPlease send me a detailed quote. Thank you!`);
@@ -359,13 +366,13 @@ function App() {
 
               return (
                 <div key={index} className={`service-card interactive ${service.popular ? 'popular-card' : ''} ${service.badge ? 'foundation-card' : ''}`}>
-  
+
                   {/* Popular Badge */}
                   {service.popular && (
                     <div className="popular-badge">Most Popular</div>
                   )}
 
-                  {/* New: Custom text badge (used for Foundation Build) */}
+                  {/* Custom text badge (used for Foundation Build) */}
                   {service.badge && (
                     <div className="custom-badge">{service.badge}</div>
                   )}
@@ -375,7 +382,7 @@ function App() {
                   </div>
                   <h3>{service.title}</h3>
                   <p className="service-desc">{service.desc}</p>
-                  
+
                   {/* Features List */}
                   <ul className="service-features">
                     {service.features.map((feature, i) => (
@@ -391,8 +398,8 @@ function App() {
                       <span className="service-price">{service.price}</span>
                       <span className="service-range">{service.range}</span>
                     </div>
-                    
-                    {/* New Split Action Buttons */}
+
+                    {/* Split Action Buttons */}
                     <div className="service-actions">
                       <a 
                         href={serviceLink} 
@@ -403,8 +410,7 @@ function App() {
                       >
                         <MessageCircle size={18} />
                       </a>
-                      
-                      {/* THIS is where handleEmailQuote is used! */}
+
                       <button 
                         onClick={(e) => handleEmailQuote(e, service.title)} 
                         className="action-btn email-btn" 
@@ -418,9 +424,10 @@ function App() {
               );
             })}
           </div>
-          
+
           <div className="services-disclaimer">
-            <p>Every project is 100% custom. The ranges above are for typical scopes — we’ll provide an exact quote after a quick chat.</p>
+            <p><strong>Foundation Builds</strong> use a proven WorkCentrik architecture with focused customisation.</p>
+            <p><strong>Bespoke projects</strong> are fully tailored to your requirements and quoted after an initial consultation.</p>
           </div>
         </section>
 
@@ -472,7 +479,7 @@ function App() {
               <div className="leadership-bio-wrapper">
                 <p>Operating out of Cape Town, WorkCentrik is spearheaded by a dynamic dual-leadership team combining over a decade of strategic project management with cutting-edge front-end development.</p>
                 <p>Backed by academic foundations from the University of Cape Town and ongoing Computer Science studies at Harvard University, our directors bridge the critical gap between pixel-perfect aesthetic appeal, rigorous technical performance, and flawless execution.</p>
-                
+
                 {/* Condition: Show this part only when expanded */}
                 {isExpanded && (
                   <p>Driven by a philosophy of continuous mastery and community mentorship, our leadership ensures that every digital asset we architect is delivered on time, within scope, and built to scale.</p>
@@ -494,12 +501,12 @@ function App() {
         {/* Contact Section */}
         <section id="contact" className="contact-section">
           <div className="contact-container">
-            
+
             {/* Left Column: Contact Info */}
             <div className="contact-info">
               <h2>Ready to start a project?</h2>
               <p>Get in touch with us today to discuss your digital needs. Choose your preferred method of communication.</p>
-              
+
               <div className="contact-methods">
                 <a href="mailto:info@workcentrik.com" className="contact-link flex-center">
                   <Mail size={20} className="icon-spacing" /> info@workcentrik.com
@@ -512,19 +519,18 @@ function App() {
 
             {/* Right Column: Formspree Contact Form */}
             <div className="contact-form-wrapper">
-              {/* NOTE: Replace 'YOUR_FORMSPREE_ID' with your actual Formspree endpoint */}
               <form action="https://formspree.io/f/maqpklgy" method="POST" className="premium-form">
-                
+
                 <div className="form-group">
                   <label htmlFor="name">Full Name</label>
                   <input type="text" id="name" name="name" required placeholder="e.g. John Doe" />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="email">Email Address</label>
                   <input type="email" id="email" name="email" required placeholder="john@example.com" />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="service">Service Interested In</label>
                   <select 
@@ -539,12 +545,12 @@ function App() {
                     ))}
                   </select>
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="message">Project Details</label>
                   <textarea id="message" name="message" rows="4" required placeholder="Tell us a bit about your goals and requirements..."></textarea>
                 </div>
-                
+
                 <button type="submit" className="cta-button primary full-width">Send Request</button>
               </form>
             </div>
